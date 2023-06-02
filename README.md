@@ -9,7 +9,7 @@ Overall, this API simplifies the process of managing COVID-19 patient records fo
 ## Installation
 
 To install and run the application, follow the steps below:
-1. Clone the repository - `git clone `
+1. Clone the repository - `git clone https://github.com/kapishverma/hospital_API.git`
 2. Navigate to the project directory
 3. Install the dependencies - `npm install` or `npm i`
 4. Start the server: `npm start`
