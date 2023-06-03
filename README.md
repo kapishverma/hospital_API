@@ -1,4 +1,4 @@
-# Hospital API [Hosted Link!](http://13.53.206.113:7200)
+# Hospital API [Hosted Link!](https://hospital-api-kdpb.onrender.com/)
 
 This is an easy-to-use API designed for hospitals to manage health records of COVID-19 patients. It allows doctors and hospital staff to register, log in, register patients, and create reports for each visit. The API also provides features to retrieve a patient's records and filter reports by status.
 
@@ -30,7 +30,7 @@ CN Hospital API requires the following dependencies:
 
 ### Doctor
 
--   **POST** `/doctors/register` - Register a new doctor with a username and password.
+-   **POST** `https://hospital-api-kdpb.onrender.com/doctors/register` - Register a new doctor with a username and password.
 ```javascript
 {
     "name":"doctor_1",
@@ -38,7 +38,7 @@ CN Hospital API requires the following dependencies:
     "password":"1"
 }
 ```
--   **POST** `/doctors/login` - Login with a username and password to receive a JWT.
+-   **POST** `https://hospital-api-kdpb.onrender.com/doctors/login` - Login with a username and password to receive a JWT.
 ```javascript
 {
      "username":"doctor_1",
@@ -50,7 +50,7 @@ CN Hospital API requires the following dependencies:
 
 ### Patients
 
--   **POST** `/patients/register` - Register a new patient with a phone number. If the patient already exists, the existing patient info is returned.
+-   **POST** `https://hospital-api-kdpb.onrender.com/patients/register` - Register a new patient with a phone number. If the patient already exists, the existing patient info is returned.
 
 ```javascript
 {
@@ -60,7 +60,7 @@ CN Hospital API requires the following dependencies:
 "gender" : "M"
 }
 ```
--   **POST** `/patients/:id/create_report` - Create a new report for the patient with the given id, which includes the status and the date. The report is created by the doctor who is currently authenticated.
+-   **POST** `https://hospital-api-kdpb.onrender.com/patients/:id/create_report` - Create a new report for the patient with the given id, which includes the status and the date. The report is created by the doctor who is currently authenticated.
 
 ```javascript
  {
@@ -70,13 +70,13 @@ CN Hospital API requires the following dependencies:
 }
 ```
 
--   **GET** `/patients/:id/all_reports` - List all the reports for the patient with the given id, sorted from oldest to newest.
+-   **GET** `https://hospital-api-kdpb.onrender.com/patients/:id/all_reports` - List all the reports for the patient with the given id, sorted from oldest to newest.
 
 >   **example :** localhost:7200/patients/6479be2f04770c1d8fd14fd7/all_reports
 
 ### Reports
 
--   **GET** `/reports/:status` - List all the reports for all patients with the given status. The reports are sorted from oldest to newest.
+-   **GET** `https://hospital-api-kdpb.onrender.com/reports/:status` - List all the reports for all patients with the given status. The reports are sorted from oldest to newest.
 >   **example :** localhost:7200/reports/Travelled-Quarantine 
 
 
